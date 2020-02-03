@@ -18,5 +18,9 @@
         "laravel-mix": "^2.0",
         "lodash": "^4.17.4",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "js-yaml": "^3.13.1",
+        "serialize-javascript": "^2.1.2"
     }
 }
