@@ -4,7 +4,9 @@
 @include('partials.tinymce')
     <div class="container-fluid">
         <div class="jumbotron">
-            <h1>Create a new blog</h1>
+            <div id="jumbotron-card">
+            <h1>Create a new workout</h1>
+            </div>
         </div>
         <div class="col md 12">
             <form action="{{ route('blogs.store') }}" method="post" enctype="multipart/form-data">

@@ -1,4 +1,5 @@
 /* Custom CSS Styles */
+
 .img-thumbnail {
     width: 100%;
     height: 100%;
@@ -9,3 +10,18 @@
 .card {
     padding: 10px;
 }
+.jumbotron {
+    background-image: url('https://i.pinimg.com/originals/c1/4e/05/c14e0572f29fa5fab0e11a4298d64f85.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#jumbotron-card {
+    padding: 30px;
+    background: rgba(43, 43, 43, 0.59);
+    color: #ffffff;
+    text-align: center;
+}
+
+

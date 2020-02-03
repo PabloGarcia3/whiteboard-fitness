@@ -18,6 +18,21 @@
             <h2><a href="{{ route('categories.show', $category->slug) }}">{{ $category->name }}</a></h2>
             @endforeach
         </div> --}}
+        <div class="container" id="home-jumbotron">
+            <div class="jumbotron">
+                <div class="container" id="jumbotron-card">
+                    <h1 class="display-4">Share your Workouts, Learn from Coaches around the World</h1>
+                    <hr class="my-4">
+                    <p>Follow your favorite coaches and post your own workouts</p>
+                    @if(Auth::user())
+                    <a class="btn btn-primary btn-lg" href="{{ route('blogs.create') }}" role="button">Post new workout</a>
+                    @else
+                    <a class="btn btn-primary btn-lg" href="{{ route('register') }}" role="button">Sign Up Here</a>
+                    @endif
+                </div>
+            </div>
+        </div>
+        @if(Auth::user())
         <div class="container">
             <ul class="list-unstyled">
                 @foreach($blogs as $blog)
@@ -32,7 +47,7 @@
                         @endif
                         <br>
                         @if($blog->featured_video)
-                        <div id="video-player" class="img-thumbnail mr-3">
+                        <div id="video-player" class="img-thumbnail mr-3 mt-3">
                             <video width="100%" controls>
                                 <source src="/videos/featured_video/{{ $blog->featured_video ? $blog->featured_video : '' }}" type="video/mp4">
                                     Your browser does not support the video tag.
@@ -59,7 +74,7 @@
                 @endforeach
             </ul>
         </div>
-        
+        @endif
     </div>
 
 @endsection
