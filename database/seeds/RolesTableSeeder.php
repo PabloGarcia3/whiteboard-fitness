@@ -19,9 +19,5 @@ class RolesTableSeeder extends Seeder
         $author = new Role();
         $author->name = 'author';
         $author->save();
-
-        $subscriber = new Role();
-        $subscriber->name = 'subscriber';
-        $subscriber->save();
     }
 }

@@ -8,9 +8,7 @@
             @if(Auth::user() && Auth::user()->role_id === 1)
             <h1>Admin Dashboard</h1>
             @elseif(Auth::user() && Auth::user()->role_id === 2)
-                <h1>Coach Dashboard</h1>
-            @elseif(Auth::user() && Auth::user()->role_id === 3)
-                <h1>User Dashboard</h1>
+            <h1>Coach Dashboard</h1>
             @endif
         </div>
     </div>
@@ -27,12 +25,6 @@
     @elseif(Auth::user() && Auth::user()->role_id === 2)
         <div class="col-md-12">
             <a href="{{ route('blogs.create') }}" class="btn btn-primary">Create Blog</a>
-            <a href="{{ route('blogs.trash') }}" class="btn btn-danger">Trashed Blogs</a>  
-        </div>
-    {{-- Subscriber --}}
-    @elseif(Auth::user() && Auth::user()->role_id === 3)
-        <div class="col-md-12">
-            <a href="{{ route('categories.create') }}" class="btn btn-success">Create Category</a>
             <a href="{{ route('blogs.trash') }}" class="btn btn-danger">Trashed Blogs</a>  
         </div>
     @endif

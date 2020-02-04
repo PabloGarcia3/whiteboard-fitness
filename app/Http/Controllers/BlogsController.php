@@ -27,7 +27,7 @@ class BlogsController extends Controller
     public function store(Request $request){
         // Validate
         $rules = [
-            'title'=> ['required', 'min:20', 'max:160'],
+            'title'=> ['required', 'min:5', 'max:160'],
             'body'=> ['required', 'min:200'],
         ];
         $this->validate($request, $rules);
