@@ -14,8 +14,8 @@ class BlogsController extends Controller
     }
     
     public function index(){
-        $blogs = Blog::where('status', 1)->latest()->get();
-        // $blogs = Blog::latest()->get();
+        // $blogs = Blog::where('status', 1)->latest()->get();
+        $blogs = Blog::latest()->get();
         return view('blogs.index', compact('blogs'));
     }
 
@@ -59,7 +59,7 @@ class BlogsController extends Controller
             $blogByUser->category()->sync($request->category_id);
         }
 
-        Session::flash('blog_created_message', 'Congratulations you posted a new Whiteboard!');
+        Session::flash('blog_created_message', 'Congratulations you posted a new Workout!');
 
         return redirect('/blogs');
     }
@@ -116,26 +116,26 @@ class BlogsController extends Controller
         return redirect('blogs');
     }
 
-    public function delete(Request $request, $id){
+    public function delete($id){
         $blog = Blog::findOrFail($id);
         $blog->delete();
         return redirect('blogs');
     }
 
-    public function trash(){
-        $trashedBlogs = Blog::onlyTrashed()->get();
-        return view('blogs.trash', compact('trashedBlogs'));
-    }
+    // public function trash(){
+    //     $trashedBlogs = Blog::onlyTrashed()->get();
+    //     return view('blogs.trash', compact('trashedBlogs'));
+    // }
 
-    public function restore($id){
-        $restoredBlog = Blog::onlyTrashed()->findOrFail($id);
-        $restoredBlog->restore($restoredBlog);
-        return redirect('blogs');
-    }
+    // public function restore($id){
+    //     $restoredBlog = Blog::onlyTrashed()->findOrFail($id);
+    //     $restoredBlog->restore($restoredBlog);
+    //     return redirect('blogs');
+    // }
 
-    public function permanentDelete($id){
-        $permanentDeleteBlog = Blog::onlyTrashed()->findOrFail($id);
-        $permanentDeleteBlog->forceDelete($permanentDeleteBlog);
-        return back();
-    }
+    // public function permanentDelete($id){
+    //     $permanentDeleteBlog = Blog::onlyTrashed()->findOrFail($id);
+    //     $permanentDeleteBlog->forceDelete($permanentDeleteBlog);
+    //     return back();
+    // }
 }

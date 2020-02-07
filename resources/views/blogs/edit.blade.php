@@ -35,12 +35,12 @@
                 </div>
                 <div class="form-group">
                     <label for="featured_image">Featured Image</label>
-                    <input type="file" name="featured_image">
+                    <input type="file" name="featured_image" class="col-sm-3">
                     <hr>
                     OR
                     <hr>
                     <label for="featured_video">Featured Video</label>
-                    <input type="file" name="featured_video">
+                    <input type="file" name="featured_video" class="col-sm-3">
                     {{-- <label for="featured_image" class="btn btn-default">
                         <span class="btn btn-outline btn-sm btn-primary">Featured Image</span>
                         <input type="file" name="featured_image" class="form-control" hidden>

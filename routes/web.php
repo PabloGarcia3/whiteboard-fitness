@@ -20,9 +20,9 @@ Route::get('/blogs/create', "BlogsController@create")->name('blogs.create');
 Route::post('/blogs/store', "BlogsController@store")->name('blogs.store');
 
 // Keep trashed routes here
-Route::get('/blogs/trash', 'BlogsController@trash')->name('blogs.trash');
-Route::get('/blogs/{id}/restore', 'BlogsController@restore')->name('blogs.restore');
-Route::delete('/blogs/{id}/permanent-delete', "BlogsController@permanentDelete")->name('blogs.permanent-delete');
+// Route::get('/blogs/trash', 'BlogsController@trash')->name('blogs.trash');
+// Route::get('/blogs/{id}/restore', 'BlogsController@restore')->name('blogs.restore');
+// Route::delete('/blogs/{id}/permanent-delete', "BlogsController@permanentDelete")->name('blogs.permanent-delete');
 
 Route::get('/blogs/{id}', "BlogsController@show")->name('blogs.show');
 Route::get('/blogs/{id}/edit', "BlogsController@edit")->name('blogs.edit');
@@ -33,7 +33,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Admin routes
 Route::get('/dashboard', 'AdminController@index')->name('dashboard');
-Route::get('/admin/blogs', 'AdminController@blogs')->name('admin.blogs');
 
 // Route Resource
 Route::resource('categories', 'CategoryController');

@@ -39,14 +39,14 @@
                 @if(Auth::user()->role_id === 1 || Auth::user()->role_id === 2 && Auth::user()->id === $blog->user_id)
 
                 <div class="btn-group mb-3">
-                    <a class="btn btn-primary m-1" href="{{ route('blogs.edit', $blog->id) }}">Edit</a>
+                    <a class="btn btn-primary btn-xs" href="{{ route('blogs.edit', $blog->id) }}">Edit</a>
                     <form method="post" action="{{ route('blogs.delete', $blog->id) }}">
                         {{ method_field('delete') }}
-                        <button type="submit" class="btn btn-danger m-1">
+                        <button type="submit" class="btn btn-danger btn-xs">
                             Delete
                         </button>
                         {{ csrf_field() }}
-                    </form>   
+                    </form>  
                 </div>
                 @endif
                 @endif

@@ -67,7 +67,8 @@
                                 <span><a href="{{ route('categories.show', $category->slug) }}">{{ $category->name }}</a></span>
                             @endforeach
                             <h2 class="mt-0 mb-1"><a href={{ route('blogs.show', [$blog->id]) }}>{{ $blog->title }}</a></h2>
-                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            
+                            <div class="lead">{!! str_limit($blog->body, 200) !!}</div>
                         </div>
                     </li>
                 </div>

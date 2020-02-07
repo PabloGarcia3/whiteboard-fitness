@@ -16,7 +16,6 @@ class Blog extends Model
         'featured_video', 
         'meta_title', 
         'meta_description',
-        'status'
     ];
 
     public function category(){

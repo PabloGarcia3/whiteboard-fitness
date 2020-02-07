@@ -4,7 +4,9 @@
 
     <div class="container-fluid">
         <div class="jumbotron">
-            <h1>Manage Users</h1>
+            <div id="jumbotron-card">
+                <h1>Manage Users</h1>
+            </div>    
         </div>
         <div class="col-md-12">
             <div class="row">
@@ -19,7 +21,6 @@
                                 <select name="role_id" class="form-control">
                                     <option selected>{{ $user->role->name }}</option>
                                     <option value="2">Author</option>
-                                    <option value="3">Subscriber</option>
                                 </select>
                             </div>
                             <div class="form-group">
