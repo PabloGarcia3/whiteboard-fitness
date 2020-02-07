@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="whiteboard_logo_sm.png" alt="Whiteboard Fitness">
+            <img src="{{ asset('whiteboard_logo_sm.png') }}" alt="Whiteboard Fitness">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>

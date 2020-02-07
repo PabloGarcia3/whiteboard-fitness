@@ -56,7 +56,6 @@
                         @endif
                         <div class="media-body">
                             @if($blog->user)
-                                Coach: 
                                 <a href="{{ route('users.show', $blog->user->name) }}">
                                     {{ $blog->user->name }}
                                 </a> 
@@ -67,7 +66,7 @@
                                 <span><a href="{{ route('categories.show', $category->slug) }}">{{ $category->name }}</a></span>
                             @endforeach
                             <h2 class="mt-0 mb-1"><a href={{ route('blogs.show', [$blog->id]) }}>{{ $blog->title }}</a></h2>
-                            
+
                             <div class="lead">{!! str_limit($blog->body, 200) !!}</div>
                         </div>
                     </li>
