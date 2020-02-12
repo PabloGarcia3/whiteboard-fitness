@@ -45,7 +45,7 @@
                 </div>
                 <div>
                     <button class="btn btn-success" type="submit">
-                        Create a new blog
+                        Create a new workout
                     </button>
                 </div>
                 {{ csrf_field() }}
