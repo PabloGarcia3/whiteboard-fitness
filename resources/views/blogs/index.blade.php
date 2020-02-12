@@ -23,7 +23,7 @@
                 <div class="container" id="jumbotron-card">
                     <h1 class="display-4">Share your Workouts, Learn from Coaches and Athletes around the World</h1>
                     <hr class="my-4">
-                    <p>Share your own workouts with your own online whiteboard</p>
+                    <p>Share workouts with your own online whiteboard</p>
                     @if(Auth::user())
                     <a class="btn btn-primary btn-lg" href="{{ route('blogs.create') }}" role="button">Post new workout</a>
                     @else
