@@ -21,6 +21,6 @@
     },
     "dependencies": {
         "js-yaml": "^3.13.1",
-        "serialize-javascript": "^2.1.2"
+        "serialize-javascript": "^3.1.0"
     }
 }
